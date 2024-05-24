@@ -1,0 +1,30 @@
+name: Merge index.json files
+
+on:
+  push:
+    branches:
+      - main  # 你可以根据需要更改分支名称
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Merge index.json files
+      run: node index.js
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add index.json
+        git commit -m "Update merged index.json"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
