@@ -1,4 +1,17 @@
 [
-  {},
+  [
+    {},
+    {}
+  ],
+  {
+    "id": "unique_id_12345",
+    "name": "Example Media Source",
+    "description": "This is an example description of the media source.",
+    "icon": "https://example.com/icon.png",
+    "author": "Author Name",
+    "nsfw": false,
+    "versionCode": 1,
+    "versionName": "1.0.0"
+  },
   {}
 ]
