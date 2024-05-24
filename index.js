@@ -14,7 +14,7 @@ function readJsonFiles(dir) {
 
     if (stat.isDirectory()) {
       readJsonFiles(filePath);
-    } else if (file === 'index.json') {
+    } else if (file === 'mainfest.json') {
       const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
       mergedData.push(data);
     }
@@ -24,4 +24,4 @@ function readJsonFiles(dir) {
 readJsonFiles(rootDir);
 
 fs.writeFileSync(outputFilePath, JSON.stringify(mergedData, null, 2));
-console.log(`Merged ${mergedData.length} index.json files into ${outputFilePath}`);
+console.log(`Merged ${mergedData.length} mainfest.json files into ${outputFilePath}`);
