@@ -1,13 +1,15 @@
 [
   {
-    "id": "unique_id_12345",
+    "type": 1,
     "name": "Example Media Source",
     "description": "This is an example description of the media source.",
+    "url": "https://example.com/icon.png",
     "icon": "https://example.com/icon.png",
     "author": "Author Name",
     "nsfw": false,
     "versionCode": 1,
-    "versionName": "1.0.0"
+    "versionName": "1.0.0",
+    "sourceCount": 1
   },
   {
     "type": 1,
